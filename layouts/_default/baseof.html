@@ -4,8 +4,9 @@
 
 <!DOCTYPE html>
 {{- $theme := site.Params.defaultTheme | default "auto" }}
+{{- $darkTheme := site.Params.darkTheme | default "dark" }}
 {{- if eq $theme "dark" }}
-<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="dark">
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="{{ $darkTheme }}">
 {{- else if eq $theme "light" }}
 <html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="light">
 {{- else }}

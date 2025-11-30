@@ -18,7 +18,7 @@
     color: var(--theme);
     font-size: 13px;
     line-height: 36px;
-    background: var(--primary);
+    background: var(--link);
     border-radius: calc(36px / 2);
     padding: 0 16px;
 }
@@ -52,8 +52,9 @@ pre {
     position: absolute;
     top: 4px;
     right: 4px;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(78, 78, 78, 0.8);
+    color: var(--link);
+    background: var(--code-block-bg);
+    opacity: 0.8;
     border-radius: var(--radius);
     padding: 0 5px;
     font-size: 14px;

@@ -169,24 +169,25 @@
 </script>
 {{- else }}
 {{- /* theme is auto */}}
+{{- $darkTheme := site.Params.darkTheme | default "dark" }}
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
+        document.querySelector("html").dataset.theme = '{{ $darkTheme }}';
     } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
+        document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
+        document.querySelector("html").dataset.theme = '{{ $darkTheme }}';
     } else {
         document.querySelector("html").dataset.theme = 'light';
     }
-
 </script>
 {{- end }}
 {{- /* theme-toggle is disabled and theme is auto */}}
 {{- else if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark"))}}
+{{- $darkTheme := site.Params.darkTheme | default "dark" }}
 <script>
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
+        document.querySelector("html").dataset.theme = '{{ $darkTheme }}';
     } else {
         document.querySelector("html").dataset.theme = 'light';
     }

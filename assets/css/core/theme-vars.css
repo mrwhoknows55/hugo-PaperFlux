@@ -12,9 +12,13 @@
     --secondary: rgb(108, 108, 108);
     --tertiary: rgb(214, 214, 214);
     --content: rgb(31, 31, 31);
-    --code-block-bg: rgb(28, 29, 33);
+    --code-block-bg: rgb(245, 245, 245);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
+    --link: rgb(30, 30, 30);
+    --link-hover: rgb(108, 108, 108);
+    --header-color: rgb(30, 30, 30);
+    --bold-color: rgb(30, 30, 30);
     color-scheme: light;
 }
 
@@ -28,6 +32,61 @@
     --code-block-bg: rgb(46, 46, 51);
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
+    --link: rgb(110, 174, 255);
+    --link-hover: rgb(255, 255, 255);
+    --header-color: rgb(255, 255, 255);
+    --bold-color: rgb(255, 255, 255);
+    color-scheme: dark;
+}
+
+:root[data-theme="nord"] {
+    --theme: #2E3440;
+    --entry: #3B4252;
+    --primary: #ECEFF4;
+    --secondary: #D8DEE9;
+    --tertiary: #4C566A;
+    --content: #D8DEE9;
+    --code-block-bg: #3B4252;
+    --code-bg: #434C5E;
+    --border: #434C5E;
+    --link: #88C0D0;
+    --link-hover: #81A1C1;
+    --header-color: #8FBCBB;
+    --bold-color: #EBCB8B;
+    color-scheme: dark;
+}
+
+:root[data-theme="everforest"] {
+    --theme: #2f383e;
+    --entry: #374145;
+    --primary: #d3c6aa;
+    --secondary: #9da9a0;
+    --tertiary: #859289;
+    --content: #d3c6aa;
+    --code-block-bg: #374145;
+    --code-bg: #404c51;
+    --border: #404c51;
+    --link: #a7c080;
+    --link-hover: #d3c6aa;
+    --header-color: #dbbc7f;
+    --bold-color: #e69875;
+    color-scheme: dark;
+}
+
+:root[data-theme="tokyonight"] {
+    --theme: #1a1b26;
+    --entry: #24283b;
+    --primary: #c0caf5;
+    --secondary: #a9b1d6;
+    --tertiary: #565f89;
+    --content: #c0caf5;
+    --code-block-bg: #24283b;
+    --code-bg: #414868;
+    --border: #414868;
+    --link: #7aa2f7;
+    --link-hover: #bb9af7;
+    --header-color: #bb9af7;
+    --bold-color: #7dcfff;
     color-scheme: dark;
 }
 
@@ -35,6 +94,6 @@
     background: var(--code-bg);
 }
 
-[data-theme="dark"] .list {
+[data-theme]:not([data-theme="light"]) .list {
     background: var(--theme);
 }

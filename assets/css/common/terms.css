@@ -6,13 +6,14 @@
 
 .terms-tags a {
     display: block;
-    padding: 3px 10px;
-    background: var(--tertiary);
-    border-radius: 6px;
+    color: var(--link);
     transition: transform 0.1s;
 }
 
 .terms-tags a:active {
-    background: var(--tertiary);
     transform: scale(0.96);
+}
+
+.terms-tags a:hover {
+    text-decoration: underline;
 }

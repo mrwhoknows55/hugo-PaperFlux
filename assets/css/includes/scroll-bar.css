@@ -9,6 +9,7 @@
     border-radius: var(--radius);
 }
 
+:root:not([data-theme]) .list::-webkit-scrollbar-thumb,
 [data-theme="light"] .list::-webkit-scrollbar-thumb {
     border: 5px solid var(--code-bg);
 }
@@ -28,20 +29,20 @@
 
 .post-content :not(table) ::-webkit-scrollbar-thumb {
     border: 2px solid var(--code-block-bg);
-    background: rgb(113, 113, 117);
+    background: var(--tertiary);
 }
 
 .post-content :not(table) ::-webkit-scrollbar-thumb:hover {
-    background: rgb(163, 163, 165);
+    background: var(--secondary);
 }
 
 .gist table::-webkit-scrollbar-thumb {
-    border: 2px solid rgb(255, 255, 255);
-    background: rgb(173, 173, 173);
+    border: 2px solid var(--theme);
+    background: var(--tertiary);
 }
 
 .gist table::-webkit-scrollbar-thumb:hover {
-    background: rgb(112, 112, 112);
+    background: var(--secondary);
 }
 
 .post-content table::-webkit-scrollbar-thumb {
